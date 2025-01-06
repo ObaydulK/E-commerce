@@ -8,20 +8,17 @@
 
         <!-- Styles / Scripts -->
         @vite('resources/css/app.css')
-
+        @vite('resources/js/app.js')
     </head>
-    <body>
+    <body class="mx-auto max-w-screen-xl items-center px-4 sm:px-6 lg:px-8">
         <livewire:header />
     
        <livewire:hero-section/>
 
        <livewire:product-section/>
-       <livewire:product-section/>
-       <livewire:product-section/>
-       <livewire:product-section/>
-       <livewire:product-section/>
-       <livewire:product-section/>
- 
 
+        <!-- <livewire:about/> -->
+
+       <livewire:footer/>
     </body>
 </html>
