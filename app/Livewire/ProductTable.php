@@ -9,7 +9,7 @@ use Livewire\WithPagination;
 class ProductTable extends Component
 {
     use WithPagination;
-    public $perPage=5;
+    public $perPage=10;
     public $sortBy= "Created_at";
     public $sortDir= "DESC";
     public $search= " ";
@@ -24,6 +24,12 @@ class ProductTable extends Component
         $this->sortBy = $sortColum;
         $this->sortDir = 'ASC';
 
+    }
+
+    public function delete($id){
+        $product = Product::find($id);
+        $product->delete();
+        return $this->redirect('/products', navigate:true);
     }
 
     public function render()

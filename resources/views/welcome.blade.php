@@ -17,7 +17,7 @@
 
        <livewire:product-section/>
 
-        <!-- <livewire:about/> -->
+        <livewire:about/>
 
        <livewire:footer/>
     </body>

@@ -9,7 +9,7 @@
           <div class="px-6 py-4 grid gap-3 md:flex md:justify-between md:items-center border-b border-gray-200 dark:border-neutral-700">
             <div>
               <h2 class="text-xl font-semibold text-gray-800 dark:text-neutral-200">
-                Users
+                Users 
               </h2>
               <p class="text-sm text-gray-600 dark:text-neutral-400">
                 Add users, edit and more.
@@ -66,16 +66,19 @@
              @if (count($products)> 0) 
               @foreach ($products as $product)
                   <tr wire:key="{{$product -> id}}">
-                    <div class="ps-6 lg:ps-3 xl:ps-0 pe-6 py-3">
-                      <a href="">
-                          <div class="flex items-center gap-x-3">
-                            <img class="inline-block size-[38px] rounded-full" src=" {{Storage::url($product->inage)}} " alt="Avatar">
-                            <div class="grow">
-                              <span class="block text-sm font-semibold text-gray-800 dark:text-neutral-200">{{str($product->name)}}</span>
-                             </div>
-                          </div>
-                      </a> 
-                      </div>
+                      <td class="size-px  px-5">
+                        <div class="ps-6 lg:ps-3 xl:ps-0 pe-6 py-3">
+                          <a wire:navigate href="">
+                            <div class="flex items-center gap-x-3">
+                            
+                              <img class="inline-block size-[38px] rounded-full" src="{{ Storage::url($product->image)}}" alt="Avatar">
+                              <div class="grow">
+                                <span class="block text-sm font-semibold text-gray-800 dark:text-neutral-200">{{str($product->name)->words(3)}}</span>
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                       </td>
                     <td>
                     <div class="px-6 py-3">
 								        <span class="block text-sm  text-gray-800 dark:text-neutral-200">{{ str($product->description)->words(8)}}</span>
@@ -109,14 +112,14 @@
                     </td>
                     <td class="size-px whitespace-nowrap">
                       <div class="px-6 py-1.5">
-                        <a wire:navigate class="inline-flex items-center gap-x-1 text-sm text-blue-600 decoration-2 hover:underline focus:outline-none focus:underline font-medium dark:text-blue-500" href="edit{{$product->id}}/product">
+                        <a wire:navigate class="inline-flex items-center gap-x-1 text-sm text-blue-600 decoration-2 hover:underline focus:outline-none focus:underline font-medium dark:text-blue-500" href="edit/{{$product->id}}/product">
                           Edit
                         </a>
                       </div>
                     </td>
                     <td class="size-px whitespace-nowrap">
                       <div class="px-6 py-1.5">
-                        <a wire:navigate wire:click="delete({{$product->id}})" wire:confirm.prompt="Are you sure?\n\nType Delete to confirm|DELETE" class="inline-flex items-center gap-x-1 text-sm text-blue-600 decoration-2 hover:underline focus:outline-none focus:underline font-medium dark:text-blue-500" href="#">
+                        <a wire:navigate wire:click="delete({{$product->id}})"  class="inline-flex items-center gap-x-1 text-sm text-blue-600 decoration-2 hover:underline focus:outline-none focus:underline font-medium dark:text-blue-500" href="">
                           Delete
                         </a>
                       </div>
