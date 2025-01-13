@@ -24,7 +24,7 @@ class ShoppingCartComponent extends Component
         $this->calculateTotals();
     }
     public function calculateTotals(){
-        $this->subtotal = $this->cartItems->sum(function ($item) {
+        $this->subtotal = $this->cartItems->sum(function($item) {
             return $item->quantity * $item->product->price;
         });
         $this->vat = $this->subtotal * 0.1;
@@ -32,11 +32,16 @@ class ShoppingCartComponent extends Component
         $this->total = $this->subtotal + $this->vat - $this->discount;
     }
 
+    public function getCartItems(){
+        return ShoppingCart::with('product')->where('user_id', Auth::id())->get();
+    }
+
     public function addToCard($productId){
-        $cartItem = ShoppingCart::where('user_id', Auth::id())->where('product_id', $productId)->first();
+        $cartItem = ShoppingCart::where('user_id', Auth::id())
+        ->where('product_id', $productId)->first();
         
         if($cartItem){
-            $cartItem->quantity +=1;
+            $cartItem->quantity += 1;
             $cartItem->save();
         }else{
             ShoppingCart::create([

@@ -9,13 +9,13 @@
             
         </div> 
 
-        <h2 class="font-medium text-[20px] my-3">Brand New </h2>
+        <h2 class="font-medium text-[20px] my-3"> Grab the best on SmartPhones</h2>
         <livewire:product-iteam : category_id="0" />
 
         <h2 class="font-medium text-[20px] my-3">Digital Products </h2>
         <livewire:product-iteam : category_id="1" />
 
-        <h2 class="font-medium text-[20px] my-3">Fashion And Apparel </h2>
+        <h2 class="font-medium text-[20px] my-3">Best Selling Products </h2>
         <livewire:product-iteam : category_id="1"/>
     </div>
 </div>

@@ -19,10 +19,12 @@ class ItemCard extends Component
     }
 
     public function addToCard($productId){
-        $cartItem = ShoppingCart::where('user_id', Auth::id())->where('product_id', $productId)->first();
+        $cartItem = ShoppingCart::where('user_id', Auth::id())
+        ->where('product_id', $productId)
+        ->first();
         
         if($cartItem){
-            $cartItem->quantity +=1;
+            $cartItem->quantity += 1;
             $cartItem->save();
         }else{
             ShoppingCart::create([

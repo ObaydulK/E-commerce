@@ -1,6 +1,6 @@
  
     <div class="bg-gray-100 shadow-sm rounded-lg hover:border border-blue-400 p-1">
-        <a wire:navigate href="/product/{{$product->id}}/details?">
+        <a wire:navigate href="/product/{{$product->id}}/details">
             <div class="justify-between">
                 <div>
                     <img src="{{ $product->image ? Storage::url($product->image) : asset('images/2.jpg') }}" alt="product-images" class="rounded-t-lg object-cover w-full h-[180px]">
