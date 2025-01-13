@@ -4,14 +4,14 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Laravel</title>
+        <title>{{$title ?? 'Page Title'}}</title>
         <!-- Styles / Scripts -->
         @vite('resources/css/app.css')
         @vite('resources/js/app.js')
     </head>
 
+    <!-- Breadcrumb -->
     <body class="mx-auto items-center px-4 sm:px-6 lg:px-8">
-        <!-- Breadcrumb -->
         <div class="sticky top-0 inset-x-0 z-20 bg-white border-y px-4 sm:px-6 lg:px-8 lg:hidden dark:bg-neutral-800 dark:border-neutral-700">
           <div class="flex items-center py-2">
             <!-- Navigation Toggle -->
@@ -37,6 +37,9 @@
           </div>
         </div>
         <!-- End Breadcrumb -->
+          </div>
+        </div>
+        <!-- End Breadcrumb -->
 
         <!-- Sidebar -->
             <div id="hs-application-sidebar" class="hs-overlay  [--auto-close:lg] hs-overlay-open:translate-x-0 -translate-x-full transition-all duration-300 transform
@@ -52,11 +55,7 @@
                           <circle cx="13" cy="16.5214" r="5" class="fill-blue-600 dark:fill-white" fill="currentColor"/>
                         </svg>
                       </a>
-                      <!-- End Logo -->
-
-                      <div class="hidden lg:block ms-2">
-
-                      </div>
+                      <!-- End Logo --> 
                     </div>
 
                     <!-- Content -->
@@ -77,13 +76,13 @@
                             <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
                             orders
                           </a></li>
-                          <li><a wire:navigate class="w-full flex items-center gap-x-3.5 py-2 px-2.5 {{Request::is('orders') ? 'bg-gray-100': ' ' }} text-sm text-gray-800 rounded-lg hover:bg-gray-100 dark:hover:bg-neutral-900 dark:text-neutral-200 dark:hover:text-neutral-300" href="/manage/catagories">
+                          <li><a wire:navigate class="w-full flex items-center gap-x-3.5 py-2 px-2.5 {{Request::is('manage/catagories') ? 'bg-gray-100': ' ' }} text-sm text-gray-800 rounded-lg hover:bg-gray-100 dark:hover:bg-neutral-900 dark:text-neutral-200 dark:hover:text-neutral-300" href="/manage/catagories">
                             <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
                             Catagories
                           </a></li>
-                          <li> <a wire:navigate class="w-full flex items-center gap-x-3.5 py-2 px-2.5 {{Request::is('login') ? 'bg-gray-100': ' ' }} text-sm text-gray-800 rounded-lg hover:bg-gray-100 dark:hover:bg-neutral-900 dark:text-neutral-200 dark:hover:text-neutral-300"
-                            href="/auth/login">
-                            Login
+                          <li> <a wire:navigate class="w-full flex items-center gap-x-3.5 py-2 px-2.5 {{Request::is('logout') ? 'bg-gray-100': ' ' }} text-sm text-gray-800 rounded-lg hover:bg-gray-100 dark:hover:bg-neutral-900 dark:text-neutral-200 dark:hover:text-neutral-300"
+                            href="/auth/logout">
+                            Logout
                           </a> </li>
                         </ul>
                       </nav>

@@ -10,7 +10,7 @@ class ManageCategories extends Component
 {
     use WithPagination;
 
-    public $perPage=5;
+    public $perPage = 5;
     public $sortBy = 'created_at';
     public $sortDir = 'DESC';
 
@@ -27,11 +27,11 @@ class ManageCategories extends Component
         $this->sortBy = $sortColum;
         $this->sortDir = 'ASC';
     }
-    public function delete($id){
-        $category = Category::find($id);
-        $category->delete();
-        return $this->redirect('/manage/catagories', navigate:'true');
-    }
+    // public function delete($id){
+    //     $category = Category::find($id);
+    //     $category->delete();
+    //     return $this->redirect('/manage/catagories', navigate:'true');
+    // }
 
     public function render()
     {

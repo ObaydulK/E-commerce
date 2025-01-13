@@ -69,6 +69,19 @@
           </h2>
         </div>
         <!-- End Col -->
+                             <!-- End Col -->
+					<div class="sm:col-span-3">         
+                        </div>
+                        <!-- End Col -->
+                        <div class="sm:col-span-9">
+                            @if ($photo && is_string($photo))
+                                <img src="{{ Storage::url($photo) }}" alt="Product image" height="300px" width="300px" class="rounded-lg">
+                            @elseif ($photo)
+                                <img src="{{ $photo->temporaryUrl() }}" alt="Product image" height="300px" width="300px" class="rounded-lg">
+                            @else
+                                <img src="{{ asset('default-image.jpg') }}" alt="default image" height="300px" width="300px" class="rounded-lg">
+                            @endif
+              </div>
 
         <div class="sm:col-span-3">
           <label for="af-submit-application-resume-cv" class="inline-block text-sm font-medium text-gray-500 mt-2.5 dark:text-neutral-500">
@@ -116,7 +129,7 @@
 
 
       <button type="submit" class="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none">
-        Update and Save (4.25-to)
+        Update and Save 
       </button>
     </form>
   </div>

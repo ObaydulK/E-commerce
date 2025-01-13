@@ -34,8 +34,8 @@ class EditProduct extends Component
         $this->validate([
             "product_name"=> "required",
             "product_Price"=> "required|numeric",
-            "category_id"=> "required",
-            "photo"=> "required|image|mimes:,jpg,png,jpeg,pdf|max:1024",
+            "category_id"=> "required|exists:categories, id",
+            "photo"=> " nullable|image|max:1024",
             "product_Description"=> "required",
         ]);
         if($this->photo && !is_string($this->photo)){
@@ -44,7 +44,7 @@ class EditProduct extends Component
             $photoPath = $this->photo;
         } 
 
-        $this->product_details([
+        $this->product_details->update([
             'name'=> $this->product_name,
             'price'=> $this->product_Price,
             'category_id'=> $this->category_id,
