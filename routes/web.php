@@ -9,15 +9,19 @@ use App\Livewire\ManageOrder;
 use App\Livewire\ManageProduct;
 use App\Livewire\ProductDetails;
 use App\Livewire\About;
+use App\Livewire\ShoppingCartComponent;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/about', About::class);
+Route::get('/product/{product_id}/details',  ProductDetails::class);
+Route::get('/shopping-cart',ShoppingCartComponent::class)->name('shopping-cart');
+
+
 
 Route::group(['middleware'=> 'admin'], function () {
-    Route::get('/product/details',  ProductDetails::class);
     
     Route::get('/admin/deshboard', AdminDeshboard::class)->name('deshboard');
     

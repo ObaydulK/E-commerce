@@ -100,13 +100,6 @@
                     </td>
                     <td class="size-px whitespace-nowrap">
                       <div class="px-6 py-3">
-                        <span class="py-1 px-1.5 inline-flex items-center gap-x-1 text-xs font-medium bg-teal-100 text-teal-800 rounded-full dark:bg-teal-500/10 dark:text-teal-500">
-                          {{$product->category->name}}
-                        </span>
-                      </div>
-                    </td>
-                    <td class="size-px whitespace-nowrap">
-                      <div class="px-6 py-3">
                         <span class="text-sm text-gray-500 dark:text-neutral-500">{{date('D M Y, H:i', strtotime($product->created_at))}}</span>
                       </div>
                     </td>

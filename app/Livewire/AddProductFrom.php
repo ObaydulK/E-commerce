@@ -27,11 +27,11 @@ class AddProductFrom extends Component
         $this->validate([
             "product_name"=> "required",
             "product_Price"=> "required|numeric",
-            "photo"=> "required|image|mimes:,jpg,png,jpeg,pdf|max:1024",
+            "photo"=> "image|required|mimes:jpg,png,jpeg,pdf|max:1024",
             "product_Description"=> "required",
             "category_id"=> "required",
         ]);
-        $path = $this->photo->store('photos');
+        $path = $this->photo->store('public/photos');
 
         $product = new Product();
         $product->name = $this->product_name;

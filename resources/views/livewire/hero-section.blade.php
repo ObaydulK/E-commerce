@@ -1,30 +1,97 @@
 <section class="">
-  <div class="bg-gray-50 mx-auto max-w-screen-xl px-4 py-32 lg:flex lg:h-screen lg:items-center">
-    <div class="mx-auto max-w-xl text-center">
-      <h1 class="text-3xl font-extrabold sm:text-5xl">
-        Online MarketPlace
-        <strong class="font-extrabold text-red-700 sm:block"> Discover Quality. </strong>
-      </h1>
+  <!-- Slider -->
+  <div class="py-4">
+    <div data-hs-carousel='{
+      "loadingClasses": "opacity-0"
+    }' class="relative">
+      <div
+        class="hs-carousel relative overflow-hidden w-full h-[30rem] md:h-[calc(100vh-106px)]  bg-gray-100 rounded-2xl dark:bg-neutral-800">
+        <div
+          class="hs-carousel-body absolute top-0 bottom-0 start-0 flex flex-nowrap transition-transform duration-700 opacity-0">
+          <!-- Item -->
+          <div class="hs-carousel-slide ">
+            <div class="h-[30rem] md:h-[calc(100vh-106px)]  flex flex-col bg-[url('/public/images/bg-images.jpg')] bg-cover bg-center bg-no-repeat">
+              <div class="ml-auto w-2/3 bg-[#FFF3E3] md:max-w-lg p-5 rounded  m-14">
+                <span class="block text-[#333333]">New Arrival</span>
+                <span class="block text-[#B88E2F] text-xl text-bold md:text-3xl">Discover Our New Collection</span>
+                <span class="block text-[#333333] text-xl  ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut minus, numquam quae ex saepe asperiores sint, soluta tenetur voluptas temporibus est nulla ullam accusantium dolores a sunt ab perspiciatis eligendi.</span>
+                <div class="mt-5">
+                  <a class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-xl bg-white border border-transparent text-[##FFFFFF] hover:bg-gray-100 focus:outline-none focus:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none"
+                    href="#">
+                    BUY NOW
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End Item -->
 
-      <p class="mt-4 sm:text-xl/relaxed">
-        Browse our collection of high-quality products and enjoy saeamlass online shoppong
-      </p>
+          <!-- Item -->
+          <div class="hs-carousel-slide">
+            <div
+              class="h-[30rem] md:h-[calc(100vh-106px)]  flex flex-col bg-[url('https://images.unsplash.com/photo-1612287230202-1ff1d85d1bdf?q=80&w=1920&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-cover bg-center bg-no-repeat">
+              <div class="mt-auto w-2/3 md:max-w-lg ps-5 pb-5 md:ps-10 md:pb-10">
+                <span class="block text-white">CoolApps</span>
+                <span class="block text-white text-xl md:text-3xl">From mobile apps to gaming consoles</span>
+                <div class="mt-5">
+                  <a class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-xl bg-white border border-transparent text-black hover:bg-gray-100 focus:outline-none focus:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none"
+                    href="#">
+                    Read Case Studies
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End Item -->
 
-      <div class="mt-8 flex flex-wrap justify-center gap-4">
-        <a
-          class="block w-full rounded bg-red-600 px-12 py-3 text-sm font-medium text-white shadow hover:bg-red-700 focus:outline-none focus:ring active:bg-red-500 sm:w-auto"
-          href="#"
-        >
-          Get Started
-        </a>
-
-        <a
-          class="block w-full rounded px-12 py-3 text-sm font-medium text-red-600 shadow hover:text-red-700 focus:outline-none focus:ring active:text-red-500 sm:w-auto"
-          href="#"
-        >
-          Learn More
-        </a>
+          <!-- Item -->
+          <div class="hs-carousel-slide">
+            <div
+              class="h-[30rem] md:h-[calc(100vh-106px)]  flex flex-col bg-[url('https://images.unsplash.com/photo-1629666451094-8908989cae90?q=80&w=1920&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-cover bg-center bg-no-repeat">
+              <div class="mt-auto w-2/3 md:max-w-lg ps-5 pb-5 md:ps-10 md:pb-10">
+                <span class="block text-white">Grumpy</span>
+                <span class="block text-white text-xl md:text-3xl">Bringing Art to everything</span>
+                <div class="mt-5">
+                  <a class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-xl bg-white border border-transparent text-black hover:bg-gray-100 focus:outline-none focus:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none"
+                    href="#">
+                    Read Case Studies
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End Item -->
+        </div>
       </div>
+
+      <!-- Arrows -->
+      <button type="button"
+        class="hs-carousel-prev hs-carousel-disabled:opacity-50 disabled:pointer-events-none absolute inset-y-0 start-0 inline-flex justify-center items-center w-12 h-full text-black hover:bg-white/20 rounded-s-2xl focus:outline-none focus:bg-white/20">
+        <span class="text-2xl" aria-hidden="true">
+          <svg class="shrink-0 size-3.5 md:size-4" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+            fill="currentColor" viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+              d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z">
+            </path>
+          </svg>
+        </span>
+        <span class="sr-only">Previous</span>
+      </button>
+
+      <button type="button"
+        class="hs-carousel-next hs-carousel-disabled:opacity-50 disabled:pointer-events-none absolute inset-y-0 end-0 inline-flex justify-center items-center w-12 h-full text-black hover:bg-white/20 rounded-e-2xl focus:outline-none focus:bg-white/20">
+        <span class="sr-only">Next</span>
+        <span class="text-2xl" aria-hidden="true">
+          <svg class="shrink-0 size-3.5 md:size-4" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+            fill="currentColor" viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+              d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z">
+            </path>
+          </svg>
+        </span>
+      </button>
+      <!-- End Arrows -->
     </div>
   </div>
+  <!-- End Slider -->
 </section>
