@@ -24,7 +24,7 @@
                         <span>Add to cart</span>
                 </button>
             @else
-                <a class="" href="/auth/login">
+                <a wire:navigate class="" href="/auth/login">
                     <div
                         class="flex gap-2 justify-center w-full rounded border border-indigo-600 bg-indigo-600 px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-indigo-600 focus:outline-none focus:ring active:text-indigo-500">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
